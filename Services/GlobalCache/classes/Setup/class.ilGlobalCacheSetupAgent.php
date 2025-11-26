@@ -72,6 +72,10 @@ class ilGlobalCacheSetupAgent implements Setup\Agent
                         array_walk($data["memcached_nodes"], function (array $node) use ($settings): void {
                             $settings->addMemcachedNode($this->convertNode($node));
                         });
+                    case "redis":
+                        array_walk($data["redis_nodes"], function (array $node) use ($settings): void {
+                            $settings->addMemcachedNode($this->convertNode($node));
+                        });
                         $settings->setService(\ILIAS\Cache\Config::MEMCACHED);
                         break;
                     case "apc":
