@@ -33,6 +33,7 @@ class Factory
             Config::APCU => new APCu($config),
             Config::PHPSTATIC => new PHPStatic($config),
             Config::MEMCACHED => new Memcached($config),
+            Config::REDIS => new Redis($config),
             default => new PHPStatic($config),
         };
 

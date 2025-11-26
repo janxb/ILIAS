@@ -33,6 +33,7 @@ class Config
     public const APCU = 'apc';
     public const PHPSTATIC = 'static';
     public const MEMCACHED = 'memcached';
+    public const REDIS = 'redis';
     protected int $default_ttl = 300;
 
     public function __construct(
